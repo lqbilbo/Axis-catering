@@ -1,4 +1,4 @@
-package com.sankuai;
+package com.threequick;
 
 import static org.junit.Assert.assertTrue;
 

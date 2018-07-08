@@ -1,4 +1,4 @@
-package com.sankuai;
+package com.threequick;
 
 /**
  * Hello world!
