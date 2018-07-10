@@ -25,15 +25,22 @@ public class MetaData implements Map<String, Object>, Serializable {
 
     private final Map<String, Object> values;
 
-    public MetaData() { values = Collections.emptyMap(); }
+    public MetaData() {
+        values = Collections.emptyMap();
+    }
 
-    public static MetaData emptyInstance() {return EMPTY_META_DATA; }
+    public static MetaData emptyInstance() {
+        return EMPTY_META_DATA;
+    }
 
-    public MetaData(Map<String, ?> items) { values = Collections.unmodifiableMap(new HashMap<>(items)); }
+    public MetaData(Map<String, ?> items) {
+        values = Collections.unmodifiableMap(new HashMap<>(items));
+    }
 
     /**
      * 根据metaDataEntries创建Metadata新实例
      * 如果该实例已经存在，则直接返回。这样做比单纯的拷贝构造器{@link #MetaData(java.util.Map)}更合适
+     *
      * @param metaDataEntries
      * @return
      */

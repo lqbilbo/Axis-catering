@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:flow="http://www.springframework.org/schema/webflow-config"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/webflow-config
+        http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="knight" class="spring.inject.BraveKnight">
+        <constructor-arg ref="quest"/>
+    </bean>
+    <bean id="quest" class="spring.inject.SlayDragonQuest" lazy-init="true">
+        <constructor-arg value="#{T(System).out}" />
+    </bean>
+
+    <bean id="minstrel" class="spring.inject.Minstrel">
+        <constructor-arg value="#{T(System).out}"/>
+    </bean>
+
+    <bean id="audienceXml"></bean>
+    <bean id="trackCounter" class="soundsystem.TrackCounter"/>
+    <aop:config>
+        <aop:aspect ref="minstrel">
+            <aop:pointcut id="embark" expression="execution(* *.embarkOnQuest(..))"/>
+            <aop:before method="singBeforeQuest" pointcut-ref="embark" />
+            <aop:after method="singAfterQuest" pointcut-ref="embark"/>
+        </aop:aspect>
+
+        <aop:aspect ref="audienceXml">
+            <aop:pointcut id="performance" expression="execution(* spring.aop.concert.Performance.perform(..))"/>
+            <aop:before method="silenceCellPhones" pointcut-ref="performance" />
+            <aop:before method="takeSeats" pointcut-ref="performance"/>
+            <aop:after-returning method="applause" pointcut-ref="performance"/>
+            <aop:after-throwing method="demandRefund" pointcut-ref="performance"/>
+        </aop:aspect>
+        
+        <aop:aspect ref="trackCounter">
+            <aop:pointcut id="trackPlayed" expression="execution(* soundsystem.CompactDisc.playTrack(int)) and args(trackNumber)"/>
+            <aop:before method="countTrack" pointcut-ref="trackPlayed"/>
+        </aop:aspect>
+    </aop:config>
+
+    <!--<bean name="/news.html" init-method="init" destroy-method="destroy" class="spring.inject.NewsController">
+        <constructor-arg ref="persistence"/>
+        <constructor-arg ref="newsService"/>
+    </bean>
+    <bean id="persistence" class="spring.inject.PersistenceService"/>
+    <bean id="newsService" class="spring.inject.NewsService"/>
+-->
+
+</beans>
