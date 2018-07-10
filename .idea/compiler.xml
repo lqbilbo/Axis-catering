@@ -27,10 +27,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="AxisFramework" target="1.8" />
       <module name="cqrs" target="1.8" />
       <module name="cqrs-dao" target="1.8" />
       <module name="eventbus" target="1.8" />
-      <module name="learning" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
