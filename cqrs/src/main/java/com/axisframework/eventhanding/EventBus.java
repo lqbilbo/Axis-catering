@@ -2,11 +2,12 @@ package com.axisframework.eventhanding;
 
 import com.axisframework.common.Registration;
 import com.axisframework.messaging.MessageDispatchInterceptor;
+import com.axisframework.messaging.SubscribableMessageSource;
 
 import java.util.Arrays;
 import java.util.List;
 
-public interface EventBus {
+public interface EventBus extends SubscribableMessageSource<EventMessage<?>> {
 
     /**
      * 批量发布事件消息到event bus上。这些事件会被通知到所有订阅了的listeners
