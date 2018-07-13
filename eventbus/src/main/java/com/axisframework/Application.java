@@ -52,8 +52,8 @@ public class Application {
 	@SuppressWarnings("unchecked")
 	private static <T extends Event> void startProcessors() {
 		for (ProcessorAware<T> ctx : processorContexts) {
-			EventBus<T> eventBus = new EventBus<T>(ctx.getEventBusCapacity());
-			Processor<T> processor = new Processor<T>(ctx, eventBus);
+			EventBus<T> eventBus = new EventBus<>(ctx.getEventBusCapacity());
+			Processor<T> processor = new Processor<>(ctx, eventBus);
 			processor.start();
 			processors.add(processor);
 			logger.info("[Application] Start processor " + processor.getProcessorName() + " successfully");
