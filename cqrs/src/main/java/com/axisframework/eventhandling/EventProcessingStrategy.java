@@ -1,4 +1,4 @@
-package com.axisframework.eventhanding;
+package com.axisframework.eventhandling;
 
 import java.util.List;
 import java.util.function.Consumer;

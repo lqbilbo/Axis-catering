@@ -1,4 +1,4 @@
-package com.axisframework.eventhanding;
+package com.axisframework.eventhandling;
 
 import com.axisframework.common.Registration;
 import com.axisframework.messaging.CurrentUnitOfWork;
@@ -32,13 +32,13 @@ public abstract class AbstractEventBus implements EventBus {
     private final String eventsKey = this + "_EVENTS";
     private final Set<Consumer<List<? extends EventMessage<?>>>> eventProcessors = new CopyOnWriteArraySet<>();
 
-    @Override
+//    @Override
     public Registration subscribe(Consumer<List<? extends EventMessage<?>>> eventProcessor) {
         this.eventProcessors.add(eventProcessor);
         return () -> eventProcessors.remove(eventProcessor);
     }
 
-    @Override
+//    @Override
     public void publish(List<? extends EventMessage<?>> events) {
 
         if (CurrentUnitOfWork.isStarted()) {

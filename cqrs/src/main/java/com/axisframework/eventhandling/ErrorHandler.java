@@ -1,4 +1,4 @@
-package com.axisframework.eventhanding;
+package com.axisframework.eventhandling;
 
 public interface ErrorHandler {
 

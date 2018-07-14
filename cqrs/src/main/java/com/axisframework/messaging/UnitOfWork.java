@@ -2,7 +2,7 @@ package com.axisframework.messaging;
 
 import com.axisframework.common.transaction.Transaction;
 import com.axisframework.common.transaction.TransactionManager;
-import com.axisframework.eventhanding.EventMessage;
+import com.axisframework.eventhandling.EventMessage;
 
 import java.util.Map;
 import java.util.Optional;

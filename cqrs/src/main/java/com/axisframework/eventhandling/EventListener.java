@@ -1,4 +1,6 @@
-package com.axisframework.eventhanding;
+package com.axisframework.eventhandling;
+
+import com.axisframework.domain.Event;
 
 /**
  * 处理事件的类接口
@@ -11,7 +13,9 @@ public interface EventListener {
      * @param event 处理的事件
      * @throws Exception
      */
-    void handle(EventMessage<?> event) throws Exception;
+//    void handle(EventMessage<?> event);
+
+    void handle(Event event);
 
     default boolean canHandle(EventMessage<?> event) { return true; }
 

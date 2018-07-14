@@ -1,6 +1,6 @@
 package com.axisframework.config;
 
-import com.axisframework.eventhanding.EventBus;
+import com.axisframework.eventhandling.EventBus;
 
 import java.util.function.Supplier;
 
