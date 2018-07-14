@@ -81,7 +81,7 @@ class EventContainer {
     }
 
     /**
-     * Read the events inside this container using a {@link org.axonframework.domain.DomainEventStream}.
+     * Read the events inside this container using a {@link com.axisframework.domain.DomainEventStream}.
      *
      * @return a DomainEventStream providing access to the events in this container
      */
