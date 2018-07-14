@@ -1,4 +1,4 @@
-package com.axisframework.eventhanding;
+package com.axisframework.eventhandling;
 
 import com.axisframework.messaging.Message;
 import com.axisframework.messaging.MessageDecorator;

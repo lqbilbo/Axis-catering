@@ -1,4 +1,4 @@
-package com.axisframework.eventhanding;
+package com.axisframework.eventhandling;
 
 /**
  * 事件处理器的延迟调用

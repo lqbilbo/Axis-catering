@@ -8,7 +8,7 @@ import java.util.Map;
  *
  * @param <T> 包含在该Message中的payload类型
  * @author luoqi
- * @see com.axisframework.eventhanding.EventMessage
+ * @see com.axisframework.eventhandling.EventMessage
  * @since 1.0
  */
 public interface Message<T> {
