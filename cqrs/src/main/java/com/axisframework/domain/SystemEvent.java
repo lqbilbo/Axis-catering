@@ -20,7 +20,7 @@ package com.axisframework.domain;
  * System events are a special type of application event. They notify the application of a state change of an
  * application component.
  * <p/>
- * In addition to the information provided by the {@link org.axonframework.domain.ApplicationEvent}, system events also provide information about
+ * In addition to the information provided by the {@link com.axisframework.domain.ApplicationEvent}, system events also provide information about
  * the exception that caused the event.
  *
  * @author Allard Buijze
