@@ -32,8 +32,8 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class SimpleCommandBus implements CommandBus {
 
-    private final ConcurrentMap<Class<?>, CommandHandler<?>> subscriptions = new ConcurrentHashMap<Class<?>, CommandHandler<?>>();
-    private volatile InterceptorChain interceptorChain = new InterceptorChain(Collections.<CommandHandlerInterceptor>emptyList());
+    private final ConcurrentMap<Class<?>, CommandHandler<?>> subscriptions = new ConcurrentHashMap<>();
+    private volatile InterceptorChain interceptorChain = new InterceptorChain(Collections.emptyList());
 
     @SuppressWarnings({"unchecked"})
     @Override
