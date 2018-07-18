@@ -21,16 +21,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cqrs" />
-        <module name="cqrs-dao" />
+        <module name="core" />
         <module name="eventbus" />
+        <module name="kds" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="AxisFramework" target="1.8" />
-      <module name="cqrs" target="1.8" />
-      <module name="cqrs-dao" target="1.8" />
+      <module name="core" target="1.8" />
       <module name="eventbus" target="1.8" />
+      <module name="kds" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AxisFramework.iml" filepath="$PROJECT_DIR$/AxisFramework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cqrs/cqrs.iml" filepath="$PROJECT_DIR$/cqrs/cqrs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cqrs-dao/cqrs-dao.iml" filepath="$PROJECT_DIR$/cqrs-dao/cqrs-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/eventbus/eventbus.iml" filepath="$PROJECT_DIR$/eventbus/eventbus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kds/kds.iml" filepath="$PROJECT_DIR$/kds/kds.iml" />
     </modules>
   </component>
 </project>
