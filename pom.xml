@@ -4,16 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.threequick</groupId>
-    <artifactId>learning</artifactId>
+    <artifactId>axis-catering</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>cqrs</module>
+        <module>core</module>
         <module>eventbus</module>
-        <module>cqrs-dao</module>
+        <module>kds</module>
     </modules>
 
-    <name>learning</name>
+    <name>Axis-catering</name>
 
     <properties>
         <!-- http -->
