@@ -21,16 +21,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="core" />
-        <module name="eventbus" />
-        <module name="kds" />
+        <module name="axis-catering-api" />
+        <module name="axis-catering-cookingfee" />
+        <module name="axis-catering-core" />
+        <module name="axis-catering-eventbus" />
+        <module name="axis-catering-kds" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="AxisFramework" target="1.8" />
-      <module name="core" target="1.8" />
-      <module name="eventbus" target="1.8" />
-      <module name="kds" target="1.8" />
+      <module name="Axis-catering" target="1.8" />
+      <module name="axis-catering-api" target="1.8" />
+      <module name="axis-catering-cookingfee" target="1.8" />
+      <module name="axis-catering-core" target="1.8" />
+      <module name="axis-catering-eventbus" target="1.8" />
+      <module name="axis-catering-kds" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

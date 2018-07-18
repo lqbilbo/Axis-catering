@@ -11,6 +11,8 @@
         <module>core</module>
         <module>eventbus</module>
         <module>kds</module>
+        <module>api</module>
+        <module>cookingfee</module>
     </modules>
 
     <name>Axis-catering</name>

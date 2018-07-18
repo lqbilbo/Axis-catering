@@ -25,8 +25,8 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 /**
  * A CommandHandlerInterceptor that uses a {@link PlatformTransactionManager} to manage transactions around command
- * handling. If any events are handled synchronously (i.e. in the thread that processes the command), these handlers can
- * use the same transaction.
+ * handling. If any events are handled synchronously (i.e. in the thread that processes the command), these handlers
+ * can use the same transaction.
  *
  * @author Allard Buijze
  * @see PlatformTransactionManager

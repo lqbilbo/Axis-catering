@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AxisFramework.iml" filepath="$PROJECT_DIR$/AxisFramework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eventbus/eventbus.iml" filepath="$PROJECT_DIR$/eventbus/eventbus.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kds/kds.iml" filepath="$PROJECT_DIR$/kds/kds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Axis-catering.iml" filepath="$PROJECT_DIR$/Axis-catering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api/axis-catering-api.iml" filepath="$PROJECT_DIR$/api/axis-catering-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cookingfee/axis-catering-cookingfee.iml" filepath="$PROJECT_DIR$/cookingfee/axis-catering-cookingfee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/axis-catering-core.iml" filepath="$PROJECT_DIR$/core/axis-catering-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eventbus/axis-catering-eventbus.iml" filepath="$PROJECT_DIR$/eventbus/axis-catering-eventbus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kds/axis-catering-kds.iml" filepath="$PROJECT_DIR$/kds/axis-catering-kds.iml" />
     </modules>
   </component>
 </project>
