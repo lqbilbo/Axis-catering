@@ -13,11 +13,13 @@
         <module>kds</module>
         <module>api</module>
         <module>cookingfee</module>
+        <module>query</module>
     </modules>
 
     <name>Axis-catering</name>
 
     <properties>
+        <project.version>${version}</project.version>
         <!-- http -->
         <httpclient.version>4.5.2</httpclient.version>
         <httpcore.version>4.4.4</httpcore.version>
@@ -27,6 +29,9 @@
         <guava.version>21.0</guava.version>
         <jetty.version>9.4.8.v20171121</jetty.version>
         <netty.version>4.0.24.Final</netty.version>
+        <axon.version>3.1</axon.version>
+        <springdata.jpa.version>1.10.5.RELEASE</springdata.jpa.version>
+        <hibernate.javax.version>1.0.0.Final</hibernate.javax.version>
     </properties>
 
     <dependencies>
@@ -82,6 +87,13 @@
             <scope>test</scope>
         </dependency>
         <!--spring start-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-framework-bom</artifactId>
+            <version>4.3.14.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
