@@ -25,6 +25,7 @@
         <module name="axis-catering-cookingfee" />
         <module name="axis-catering-core" />
         <module name="axis-catering-eventbus" />
+        <module name="axis-catering-infrastructure" />
         <module name="axis-catering-kds" />
         <module name="axis-catering-query" />
       </profile>
@@ -35,6 +36,7 @@
       <module name="axis-catering-cookingfee" target="1.8" />
       <module name="axis-catering-core" target="1.8" />
       <module name="axis-catering-eventbus" target="1.8" />
+      <module name="axis-catering-infrastructure" target="1.8" />
       <module name="axis-catering-kds" target="1.8" />
       <module name="axis-catering-query" target="1.8" />
     </bytecodeTargetLevel>

@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/cookingfee/axis-catering-cookingfee.iml" filepath="$PROJECT_DIR$/cookingfee/axis-catering-cookingfee.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/axis-catering-core.iml" filepath="$PROJECT_DIR$/core/axis-catering-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/eventbus/axis-catering-eventbus.iml" filepath="$PROJECT_DIR$/eventbus/axis-catering-eventbus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/infrastructure/axis-catering-infrastructure.iml" filepath="$PROJECT_DIR$/infrastructure/axis-catering-infrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/kds/axis-catering-kds.iml" filepath="$PROJECT_DIR$/kds/axis-catering-kds.iml" />
       <module fileurl="file://$PROJECT_DIR$/query/axis-catering-query.iml" filepath="$PROJECT_DIR$/query/axis-catering-query.iml" />
     </modules>

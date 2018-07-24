@@ -18,13 +18,9 @@ package com.axisframework.eventstore.jpa;
 
 import com.axisframework.domain.DomainEvent;
 import com.axisframework.eventstore.EventSerializer;
-import org.joda.time.LocalDateTime;
 
-import javax.persistence.Basic;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -125,6 +121,6 @@ abstract class AbstractEventEntry {
      * @return the time stamp of the associated event.
      */
     public LocalDateTime getTimeStamp() {
-        return new LocalDateTime(timeStamp);
+        return LocalDateTime.now();
     }
 }

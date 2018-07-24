@@ -14,6 +14,7 @@
         <module>api</module>
         <module>cookingfee</module>
         <module>query</module>
+        <module>infrastructure</module>
     </modules>
 
     <name>Axis-catering</name>
@@ -32,6 +33,7 @@
         <axon.version>3.1</axon.version>
         <springdata.jpa.version>1.10.5.RELEASE</springdata.jpa.version>
         <hibernate.javax.version>1.0.0.Final</hibernate.javax.version>
+        <spring.version>4.3.14.RELEASE</spring.version>
     </properties>
 
     <dependencies>
@@ -90,29 +92,29 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-framework-bom</artifactId>
-            <version>4.3.14.RELEASE</version>
+            <version>${spring.version}</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.14.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>4.3.14.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.3.14.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.3.14.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
         <!--spring end-->
