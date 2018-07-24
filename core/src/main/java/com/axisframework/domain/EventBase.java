@@ -16,8 +16,7 @@
 
 package com.axisframework.domain;
 
-import org.joda.time.LocalDateTime;
-
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -37,7 +36,7 @@ public abstract class EventBase implements Event {
      * current date and time.
      */
     protected EventBase() {
-        timestamp = new LocalDateTime();
+        timestamp = LocalDateTime.now();
         eventIdentifier = UUID.randomUUID();
     }
 
