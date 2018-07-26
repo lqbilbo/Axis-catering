@@ -23,11 +23,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="axis-catering-api" />
         <module name="axis-catering-cookingfee" />
-        <module name="axis-catering-core" />
         <module name="axis-catering-eventbus" />
         <module name="axis-catering-infrastructure" />
         <module name="axis-catering-kds" />
         <module name="axis-catering-query" />
+        <module name="axis-catering-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -39,6 +39,7 @@
       <module name="axis-catering-infrastructure" target="1.8" />
       <module name="axis-catering-kds" target="1.8" />
       <module name="axis-catering-query" target="1.8" />
+      <module name="axis-catering-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -5,7 +5,6 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 @Configuration
-@ComponentScan("com.threequick.catering.*")
 public class PersistenceInfrastructureConfig {
 
     @Bean
