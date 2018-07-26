@@ -21,8 +21,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.version>${version}</project.version>
-
         <guava.version>21.0</guava.version>
         <axon.version>3.0.6</axon.version>
         <slf4j.version>1.7.5</slf4j.version>
@@ -192,7 +190,7 @@
                     <downloadJavadocs>true</downloadJavadocs>
                 </configuration>
             </plugin>-->
-            <plugin>
+            <!--<plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>buildnumber-maven-plugin</artifactId>
                 <version>1.2</version>
@@ -208,7 +206,7 @@
                     <doCheck>false</doCheck>
                     <doUpdate>false</doUpdate>
                 </configuration>
-            </plugin>
+            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
