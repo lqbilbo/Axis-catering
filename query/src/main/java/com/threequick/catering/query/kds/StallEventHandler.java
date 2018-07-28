@@ -1,7 +1,7 @@
-package com.threequick.catering.query.kds.stall;
+package com.threequick.catering.query.kds;
 
 import com.threequick.catering.api.kds.stall.StallCreatedEvent;
-import com.threequick.catering.query.kds.stall.repositories.StallViewRepository;
+import com.threequick.catering.query.kds.repositories.StallViewRepository;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.stereotype.Service;

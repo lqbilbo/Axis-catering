@@ -1,4 +1,4 @@
-package com.threequick.catering.query.kds.stall;
+package com.threequick.catering.query.kds;
 
 import org.springframework.data.annotation.Id;
 

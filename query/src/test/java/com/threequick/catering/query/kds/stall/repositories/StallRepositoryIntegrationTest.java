@@ -1,8 +1,10 @@
 package com.threequick.catering.query.kds.stall.repositories;
 
+import com.threequick.catering.api.kds.stall.StallId;
 import com.threequick.catering.infra.config.PersistenceInfrastructureConfig;
 import com.threequick.catering.query.config.HsqlDbConfiguration;
-import com.threequick.catering.query.kds.stall.StallView;
+import com.threequick.catering.query.kds.StallView;
+import com.threequick.catering.query.kds.repositories.StallViewRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,7 @@ public class StallRepositoryIntegrationTest {
     @Test
     public void storeStallInRepository() {
         StallView stallView = new StallView();
+        stallView.setIdentifier(new StallId().toString());
         stallView.setAbility(1);
         stallView.setRequirements("烹饪");
         stallView.setRemark("档口1");
