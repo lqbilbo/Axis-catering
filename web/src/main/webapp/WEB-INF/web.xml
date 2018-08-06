@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+    <display-name>Axis-catering</display-name>
+    <!-- Web全局参数 -->
+    <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>Axis-catering</param-value>
+    </context-param>
+
+    <!-- cat统计 -->
+    <!--<filter>
+        <filter-name>cat-filter</filter-name>
+        <filter-class>com.dianping.cat.servlet.CatFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>cat-filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>-->
+
+    <!-- 请求参数编码过滤器 -->
+    <filter>
+        <filter-name>SetCharacterEncoding</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>SetCharacterEncoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <!--    <context-param>
+            <param-name>jmonitor-configfile</param-name>
+            <param-value>jmonitor.properties</param-value>
+        </context-param>
+        <listener>
+            <listener-class>com.meituan.jmonitor.servlet.ContextListener</listener-class>
+        </listener>
+        <filter>
+            <filter-name>jMonitorHttpMonitorFilter</filter-name>
+            <filter-class>com.meituan.jmonitor.collector.http.HttpMonitorFilter</filter-class>
+        </filter>
+        <filter-mapping>
+            <filter-name>jMonitorHttpMonitorFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>-->
+</web-app>
