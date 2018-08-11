@@ -27,6 +27,7 @@
         <log4j.version>1.2.17</log4j.version>
         <!-- spring -->
         <spring.version>4.0.6.RELEASE</spring.version>
+        <camel.version>2.21.0</camel.version>
         <spring.security.version>3.2.5.RELEASE</spring.security.version>
 
         <!-- TODO check these for updates -->
@@ -107,16 +108,16 @@
                 <version>${hamcrest.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-core</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
         <!-- Global dependencies -->
-        <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-core</artifactId>
-            <version>2.21.0</version>
-        </dependency>
         <dependency>
             <groupId>javax.transaction</groupId>
             <artifactId>jta</artifactId>

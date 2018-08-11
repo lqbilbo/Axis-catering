@@ -22,10 +22,15 @@ import org.axonframework.commandhandling.SimpleCommandBus;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.commandhandling.gateway.DefaultCommandGateway;
 import org.axonframework.common.caching.EhCacheAdapter;
+import org.axonframework.eventsourcing.eventstore.EmbeddedEventStore;
+import org.axonframework.eventsourcing.eventstore.EventStore;
 import org.axonframework.messaging.interceptors.BeanValidationInterceptor;
+import org.axonframework.mongo.eventsourcing.eventstore.MongoEventStorageEngine;
+import org.axonframework.mongo.eventsourcing.eventstore.MongoTemplate;
 import org.axonframework.spring.config.CommandHandlerSubscriber;
 import org.axonframework.spring.config.annotation.AnnotationCommandHandlerBeanPostProcessor;
 import org.axonframework.spring.eventsourcing.SpringAggregateSnapshotterFactoryBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -34,6 +39,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("com.threequick.catering")
 public class CQRSInfrastructureConfig {
+
+    @Autowired
+    private MongoTemplate eventStoreMongoTemplate;
 
     @Bean
     public CommandBus commandBus() {
@@ -75,4 +83,15 @@ public class CQRSInfrastructureConfig {
 
         return ehCacheManagerFactoryBean;
     }
+
+    @Bean
+    public EventStore eventStore() {
+        return new EmbeddedEventStore(eventStorageEngine());
+    }
+
+    @Bean
+    public MongoEventStorageEngine eventStorageEngine() {
+        return new MongoEventStorageEngine(eventStoreMongoTemplate);
+    }
+
 }
