@@ -12,7 +12,7 @@ import java.util.Map;
 
 import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 
-@Aggregate(repository = "serveryAggregateRepository")
+@Aggregate(repository = "serveryViewRepository")
 public class Servery {
 
     private static final long DEFAULT_STALL_VALUE = 0L;
