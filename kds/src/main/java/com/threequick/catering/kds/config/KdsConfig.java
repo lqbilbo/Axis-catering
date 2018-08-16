@@ -1,5 +1,8 @@
 package com.threequick.catering.kds.config;
 
+import com.threequick.catering.kds.command.Servery;
+import com.threequick.catering.kds.command.ServeryTask;
+import com.threequick.catering.kds.command.StallTask;
 import org.axonframework.commandhandling.model.Repository;
 import org.axonframework.common.caching.Cache;
 import org.axonframework.common.transaction.Transaction;
@@ -22,6 +25,28 @@ public class KdsConfig {
                                                     eventStore,
                                                     cache,
                                                     snapshotTriggerDefinition);
+    }
+
+    @Bean(name = "serveryTaskAggregateRepository")
+    public Repository<Servery> serveryTaskAggregateRepository(AggregateFactory<ServeryTask> serveryTaskAggregateFactory,
+                                                          EventStore eventStore,
+                                                          Cache cache,
+                                                          SnapshotTriggerDefinition snapshotTriggerDefinition) {
+        return new CachingEventSourcingRepository<>(serveryTaskAggregateFactory,
+                eventStore,
+                cache,
+                snapshotTriggerDefinition);
+    }
+
+    @Bean(name = "stallTaskAggregateRepository")
+    public Repository<Servery> stallTaskAggregateRepository(AggregateFactory<StallTask> stallTaskAggregateFactory,
+                                                          EventStore eventStore,
+                                                          Cache cache,
+                                                          SnapshotTriggerDefinition snapshotTriggerDefinition) {
+        return new CachingEventSourcingRepository<>(stallTaskAggregateFactory,
+                eventStore,
+                cache,
+                snapshotTriggerDefinition);
     }
 
     @Bean(name = "transactionAggregateRepository")
