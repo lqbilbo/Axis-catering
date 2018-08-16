@@ -1,4 +1,4 @@
-package com.threequick.catering.kds.config;
+package com.threequick.catering.kds.command;
 
 import com.threequick.catering.api.kds.servery.*;
 import com.threequick.catering.api.kds.stall.StallId;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 
-@Aggregate(repository = "serveryViewRepository")
+@Aggregate(repository = "serveryAggregateRepository")
 public class Servery {
 
     private static final long DEFAULT_STALL_VALUE = 0L;
