@@ -28,7 +28,7 @@ public class KdsConfig {
     }
 
     @Bean(name = "serveryTaskAggregateRepository")
-    public Repository<Servery> serveryTaskAggregateRepository(AggregateFactory<ServeryTask> serveryTaskAggregateFactory,
+    public Repository<ServeryTask> serveryTaskAggregateRepository(AggregateFactory<ServeryTask> serveryTaskAggregateFactory,
                                                           EventStore eventStore,
                                                           Cache cache,
                                                           SnapshotTriggerDefinition snapshotTriggerDefinition) {
@@ -39,7 +39,7 @@ public class KdsConfig {
     }
 
     @Bean(name = "stallTaskAggregateRepository")
-    public Repository<Servery> stallTaskAggregateRepository(AggregateFactory<StallTask> stallTaskAggregateFactory,
+    public Repository<StallTask> stallTaskAggregateRepository(AggregateFactory<StallTask> stallTaskAggregateFactory,
                                                           EventStore eventStore,
                                                           Cache cache,
                                                           SnapshotTriggerDefinition snapshotTriggerDefinition) {
