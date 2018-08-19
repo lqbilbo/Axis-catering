@@ -2,7 +2,12 @@ package com.threequick.catering.query.kds;
 
 import org.springframework.data.annotation.Id;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class ServeryView {
@@ -16,6 +21,12 @@ public class ServeryView {
     private boolean online;
     private boolean offline;
     private String stallIdentifier;
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<CookingInfoView> cookingList = new ArrayList<>();
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<CookingInfoView> skuList = new ArrayList<>();
 
     public String getIdentifier() {
         return identifier;
@@ -71,5 +82,21 @@ public class ServeryView {
 
     public void setStallIdentifier(String stallIdentifier) {
         this.stallIdentifier = stallIdentifier;
+    }
+
+    public List<CookingInfoView> getCookingList() {
+        return cookingList;
+    }
+
+    public void setCookingList(List<CookingInfoView> cookingList) {
+        this.cookingList = cookingList;
+    }
+
+    public List<CookingInfoView> getSkuList() {
+        return skuList;
+    }
+
+    public void setSkuList(List<CookingInfoView> skuList) {
+        this.skuList = skuList;
     }
 }
