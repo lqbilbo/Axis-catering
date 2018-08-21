@@ -4,9 +4,12 @@ import com.threequick.catering.api.kds.servery.ServeryId;
 import com.threequick.catering.api.kds.servery.task.CreateServeryTaskCommand;
 import com.threequick.catering.api.kds.servery.task.ServeryTaskCreatedEvent;
 import com.threequick.catering.api.kds.servery.task.ServeryTaskId;
+import com.threequick.catering.api.kds.stall.task.StallTaskId;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.commandhandling.model.AggregateIdentifier;
 import org.axonframework.spring.stereotype.Aggregate;
+
+import java.util.List;
 
 import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 
@@ -20,14 +23,14 @@ public class ServeryTask {
     @AggregateIdentifier
     private ServeryTaskId serveryTaskId;
     private ServeryId serveryId;    //一个备餐任务只属于一个流程
+    private List<StallTaskId> reservedStallTaskIds;
+
 
     @CommandHandler
     public ServeryTask(CreateServeryTaskCommand cmd) {
         apply(new ServeryTaskCreatedEvent(cmd.getServeryTaskId(), cmd.getCookingId(), cmd.getCookingTime(),
                 cmd.getAmountOfCooking()));
     }
-
-
 
 
 }
