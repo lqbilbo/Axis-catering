@@ -1,7 +1,6 @@
 package com.threequick.catering.kds.command;
 
-import com.threequick.catering.api.kds.servery.task.CreateServeryTaskCommand;
-import com.threequick.catering.api.kds.servery.task.ServeryTaskCreatedEvent;
+import com.threequick.catering.api.kds.stall.StallId;
 import com.threequick.catering.api.kds.stall.task.CreateStallTaskCommand;
 import com.threequick.catering.api.kds.stall.task.StallTaskCreatedEvent;
 import com.threequick.catering.api.kds.stall.task.StallTaskId;
@@ -16,10 +15,11 @@ public class StallTask {
 
     @AggregateIdentifier
     private StallTaskId stallTaskId;
+    private StallId stallId;    //一个档口任务对应一个档口
 
     @CommandHandler
     public StallTask(CreateStallTaskCommand cmd) {
-        apply(new StallTaskCreatedEvent(cmd.getStallTaskId(), cmd.getServeryTaskId(),
+        apply(new StallTaskCreatedEvent(cmd.getStallTaskId(), cmd.getServeryTaskId(), cmd.getStallId(),
                 cmd.getSeq(), cmd.getEstimateTime()));
     }
 
