@@ -13,3 +13,14 @@ data class CreateStallTaskCommand(
         val seq: Int,
         val estimateTime: Long
 ) : StallTaskCommand(stallTaskId)
+
+data class WriteStallTaskLogCommand(
+        override val stallTaskId: StallTaskId,
+        val poiId: Long,
+        val orderId: Long,
+        val deliveryId: Long,
+        val serveryId: Long,
+        val stallId: Long,
+        val status: Int,
+        val createTime: Long
+) : StallTaskCommand(stallTaskId)

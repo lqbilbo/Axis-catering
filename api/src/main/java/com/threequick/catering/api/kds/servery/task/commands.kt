@@ -10,3 +10,13 @@ data class CreateServeryTaskCommand(
         val cookingTime: String,
         val amountOfCooking: Long
 ) : ServeryTaskCommand(serveryTaskId)
+
+data class WriteServeryTaskLogCommand(
+        override val serveryTaskId: ServeryTaskId,
+        val poiId: Long,
+        val orderId: Long,
+        val deliveryId: Long,
+        val serveryId: Long,
+        val status: Int,
+        val createTime: Long
+) : ServeryTaskCommand(serveryTaskId)

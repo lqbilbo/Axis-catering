@@ -8,3 +8,13 @@ class ServeryTaskCreatedEvent(
         val cookingTime: String,
         val amountOfCooking: Long
 ) : ServeryTaskEvent(serveryTaskId)
+
+data class ServeryTaskLogWriteEvent(
+        override val serveryTaskId: ServeryTaskId,
+        val poiId: Long,
+        val orderId: Long,
+        val deliveryId: Long,
+        val serveryId: Long,
+        val status: Int,
+        val createTime: Long
+) : ServeryTaskEvent(serveryTaskId)

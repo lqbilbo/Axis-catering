@@ -1,9 +1,7 @@
 package com.threequick.catering.kds.command;
 
 import com.threequick.catering.api.kds.servery.ServeryId;
-import com.threequick.catering.api.kds.servery.task.CreateServeryTaskCommand;
-import com.threequick.catering.api.kds.servery.task.ServeryTaskCreatedEvent;
-import com.threequick.catering.api.kds.servery.task.ServeryTaskId;
+import com.threequick.catering.api.kds.servery.task.*;
 import com.threequick.catering.api.kds.stall.task.StallTaskId;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.commandhandling.model.AggregateIdentifier;
@@ -25,6 +23,9 @@ public class ServeryTask {
     private ServeryId serveryId;    //一个备餐任务只属于一个流程
     private List<StallTaskId> reservedStallTaskIds;
 
+    @SuppressWarnings("UnusedDeclaration")
+    public ServeryTask() {
+    }
 
     @CommandHandler
     public ServeryTask(CreateServeryTaskCommand cmd) {
@@ -32,5 +33,9 @@ public class ServeryTask {
                 cmd.getAmountOfCooking()));
     }
 
-
+    @CommandHandler
+    public void handle(WriteServeryTaskLogCommand cmd) {
+        apply(new ServeryTaskLogWriteEvent(cmd.getServeryTaskId(), cmd.getPoiId(), cmd.getOrderId(),
+                cmd.getDeliveryId(), cmd.getServeryId(), cmd.getStatus(), cmd.getCreateTime()));
+    }
 }
