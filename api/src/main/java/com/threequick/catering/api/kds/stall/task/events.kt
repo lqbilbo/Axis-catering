@@ -12,3 +12,14 @@ class StallTaskCreatedEvent(
         val seq: Int,
         val estimateTime: Long
 ) : StallTaskEvent(stallTaskId)
+
+data class StallTaskLogWriteEvent(
+        override val stallTaskId: StallTaskId,
+        val poiId: Long,
+        val orderId: Long,
+        val deliveryId: Long,
+        val serveryId: Long,
+        val stallId: Long,
+        val status: Int,
+        val createTime: Long
+) : StallTaskEvent(stallTaskId)
