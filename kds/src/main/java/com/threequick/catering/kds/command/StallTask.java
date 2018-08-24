@@ -27,9 +27,15 @@ public class StallTask {
 
     @CommandHandler
     public void handle(WriteStallTaskLogCommand cmd) {
-        apply(new StallTaskLogWriteEvent(cmd.getStallTaskId(), cmd.getPoiId(),
+        apply(new StallTaskLogWritedEvent(cmd.getStallTaskId(), cmd.getPoiId(),
                 cmd.getOrderId(), cmd.getDeliveryId(),
                 cmd.getServeryId(), cmd.getStallId(),
                 cmd.getStatus(), cmd.getCreateTime()));
+    }
+
+    @CommandHandler
+    public void handle(PrintTaskNoteCommand cmd) {
+        apply(new TaskNotePrintedEvent(cmd.getStallTaskId(), cmd.getPoiId(),
+                cmd.getOrderId(), cmd.getStallTaskName(), cmd.getRemark()));
     }
 }

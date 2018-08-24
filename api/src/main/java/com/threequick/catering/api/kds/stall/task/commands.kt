@@ -24,3 +24,11 @@ data class WriteStallTaskLogCommand(
         val status: Int,
         val createTime: Long
 ) : StallTaskCommand(stallTaskId)
+
+data class PrintTaskNoteCommand(
+        override val stallTaskId: StallTaskId,
+        val poiId: Long,
+        val orderId: Long,
+        val stallTaskName: String,
+        val remark: String
+) : StallTaskCommand(stallTaskId)
