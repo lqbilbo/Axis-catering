@@ -9,6 +9,7 @@ abstract class StallTaskCommand(@TargetAggregateIdentifier open val stallTaskId:
 data class CreateStallTaskCommand(
         override val stallTaskId: StallTaskId,
         val serveryTaskId: ServeryTaskId,
+        val stallTaskName: String,
         val stallId: StallId,
         val seq: Int,
         val estimateTime: Long

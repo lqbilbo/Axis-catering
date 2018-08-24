@@ -21,8 +21,8 @@ public class StallTask {
 
     @CommandHandler
     public StallTask(CreateStallTaskCommand cmd) {
-        apply(new StallTaskCreatedEvent(cmd.getStallTaskId(), cmd.getServeryTaskId(), cmd.getStallId(),
-                cmd.getSeq(), cmd.getEstimateTime()));
+        apply(new StallTaskCreatedEvent(cmd.getStallTaskId(), cmd.getServeryTaskId(), cmd.getStallTaskName(),
+                cmd.getStallId(), cmd.getSeq(), cmd.getEstimateTime()));
     }
 
     @CommandHandler

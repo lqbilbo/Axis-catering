@@ -8,6 +8,10 @@ abstract class StallTaskEvent(open val stallTaskId: StallTaskId)
 class StallTaskCreatedEvent(
         override val stallTaskId: StallTaskId,
         val serveryTaskId: ServeryTaskId,
+        val poiId: Long,
+        val orderId: Long,
+        val stallTaskName: String,
+        val remark: String,
         val stallId: StallId,
         val seq: Int,
         val estimateTime: Long
