@@ -8,12 +8,16 @@ abstract class StallTaskEvent(open val stallTaskId: StallTaskId)
 class StallTaskCreatedEvent(
         override val stallTaskId: StallTaskId,
         val serveryTaskId: ServeryTaskId,
+        val poiId: Long,
+        val orderId: Long,
+        val stallTaskName: String,
+        val remark: String,
         val stallId: StallId,
         val seq: Int,
         val estimateTime: Long
 ) : StallTaskEvent(stallTaskId)
 
-data class StallTaskLogWriteEvent(
+data class StallTaskLogWritedEvent(
         override val stallTaskId: StallTaskId,
         val poiId: Long,
         val orderId: Long,
@@ -22,4 +26,12 @@ data class StallTaskLogWriteEvent(
         val stallId: Long,
         val status: Int,
         val createTime: Long
+) : StallTaskEvent(stallTaskId)
+
+data class TaskNotePrintedEvent(
+        override val stallTaskId: StallTaskId,
+        val poiId: Long,
+        val orderId: Long,
+        val stallTaskName: String,
+        val remark: String
 ) : StallTaskEvent(stallTaskId)
